@@ -1,4 +1,4 @@
-# coding: utf-8
+# -*- coding: utf-8 -*-
 
 import requests
 from bs4 import BeautifulSoup as BS
@@ -38,8 +38,8 @@ def parser_Table(table):
     rowsP = table.find_all('tr', class_='linhaPar')
     
     disciplinas = (parser_Row(rowsI) + parser_Row(rowsP))
-
-    return disciplinas
+    
+    return '{'+str(disciplinas)[1:-1]+'}'
     
 def getDisciplinas():
 

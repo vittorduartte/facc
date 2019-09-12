@@ -1,4 +1,4 @@
-# coding: utf-8
+# -*- coding: utf-8 -*-
 
 from DataClass.Disciplina import Disciplina
 from DataClass.Docente import Docente
@@ -18,10 +18,10 @@ def write_Data(data, name):
 
 
 disciplinas = Disciplina_Scraper.getDisciplinas()
-write_Data(json.dumps('{'+str(disciplinas)[1:-1]+'}'), 'disciplina_data')
+write_Data(json.dumps(disciplinas), 'data_disciplina')
 
 docentes = Docente_Scrapper.getDocentes(40)
-write_Data(docentes, 'docentes_data') 
+write_Data(docentes, 'data_docentes') 
 
 
     

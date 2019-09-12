@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import requests
 import json
 
@@ -7,7 +9,7 @@ def getDocentes(qtdd):
     response = requests.get(url)
     content = response.text
 
-    return json.loads(content)
+    return content
 
 
 
