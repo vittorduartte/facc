@@ -10,6 +10,9 @@ requests = "*"
 beautifulsoup4 = "*"
 lxml = "*"
 pylint = "*"
+sqlalchemy = "*"
+python-dotenv = "*"
+flask = "*"
 
 [requires]
 python_version = "3.6"

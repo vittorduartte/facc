@@ -7,5 +7,5 @@ class Docente:
 
     def getDocente_JSON (self):
 
-        saida = "{'SIAPE':'"+self.siape+"', 'Nome':'"+self.nome+"'}"
+        saida = "{\"SIAPE\":'"+self.siape+"', \"Nome\":'"+self.nome+"'}"
         return saida

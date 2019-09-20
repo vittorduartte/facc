@@ -18,10 +18,10 @@ def write_Data(data, name):
 
 
 disciplinas = Disciplina_Scraper.getDisciplinas()
-write_Data(json.dumps(disciplinas), 'data_disciplina')
+write_Data(str(disciplinas), 'data_disciplinas')
 
-docentes = Docente_Scrapper.getDocentes(40)
-write_Data(docentes, 'data_docentes') 
+docentes = Docente_Scrapper.getDocentes(200)
+write_Data(str(docentes), 'data_docentes') 
 
 
     

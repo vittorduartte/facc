@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import requests
+import requests, json
 from bs4 import BeautifulSoup as BS
 from DataClass.Disciplina import Disciplina
 
@@ -33,13 +33,13 @@ def parser_Row(rows):
 
 def parser_Table(table):
 
-    disciplinas = []
+    disciplinas = {}
     rowsI = table.find_all('tr', class_='linhaImpar')
     rowsP = table.find_all('tr', class_='linhaPar')
     
-    disciplinas = (parser_Row(rowsI) + parser_Row(rowsP))
+    disciplinas['data'] = (parser_Row(rowsI) + parser_Row(rowsP))
     
-    return '{'+str(disciplinas)[1:-1]+'}'
+    return disciplinas
     
 def getDisciplinas():
 
