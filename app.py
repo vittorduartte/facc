@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 
 app = Flask(__name__)
 
@@ -6,6 +6,11 @@ app = Flask(__name__)
 def index():
     var = "Minha aplicação Flask!"
     return render_template('index.html', var = var)
+
+@app.route('/certificate/')
+def cert():
+
+    return render_template('certificate.html')
 
 
 if __name__ == '__main__':

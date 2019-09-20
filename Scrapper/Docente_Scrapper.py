@@ -7,10 +7,9 @@ def getDocentes(qtdd):
     
     docentes = {}
     url = 'http://www.wjr.eti.br/nameGenerator/index.php?q='+str(qtdd)+'&o=json'
-    response = requests.get(url)
-    docentes['data'] = response.text
+    response = json.loads(requests.get(url).text)
 
-    return docentes
+    return response
 
 
 

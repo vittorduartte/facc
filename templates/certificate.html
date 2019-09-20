@@ -1,0 +1,286 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container is-widescreen">
+    <div class="columns header-institucional">
+        <div class="column is-3">
+            <img class="icon-img" src="{{ url_for('static', filename='images/ufrn.png') }}" alt="" srcset=""><br>
+            <strong><a class="info-LR" href="#">Portal do Discente</a></strong>
+        </div>
+        <div class="column is-6">
+            <div class="info-center table-title">
+                <p> <strong>Universidade Federal do Maranhão</strong> </p>
+                <p> <strong>Sistema Integrado de Gestão Acadêmica</strong> </p>
+                <p class="emissao">Emitido em 06/09/2019 13:00</p>
+            </div>
+        </div>
+        <div class="column is-3">
+            <img class="icon-img" src="{{ url_for('static', filename='images/sinfo.png') }}" alt="" srcset="">
+            <strong><a href="#"></a></strong>
+        </div>
+    </div>
+    <p class="info-center"><strong> Atestado de Matrícula </strong></p>
+    <hr class="row-style">
+    <table class="table is-fullwidth identificacao">
+        <tbody>
+            <tr>
+                <td>Período Letivo:</td>
+                <td> <strong>2019.2</strong> </td>
+                <td>Nível:</td>
+                <td> <strong>GRADUACAO</strong> </td>
+            </tr>
+            <tr>
+                <td>Matrícula:</td>
+                <td> <strong>1234567890</strong> </td>
+                <td>Vínculo:</td>
+                <td> <strong>REGULAR</strong> </td>
+            </tr>
+            <tr>
+                <td>Nome:</td>
+                <td> <strong>JOAO SILVA SOUSA</strong> </td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Curso:</td>
+                <td> <strong>CIÊNCIA E TECNOLOGIA/DCCET/CCET - SÃO LUÍS - M</strong> </td>
+                <td>Cidade:</td>
+                <td> <strong>SAO LUIS</strong> </td>
+            </tr>
+            <tr>
+                <td>Formação:</td>
+                <td> <strong>BACHARELADO</strong> </td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="turmas">
+        <h2 class="table-title"> <strong>Turmas Matriculadas: 10</strong> </h2>
+        <table class="table is-bordered is-fullwidth turmas">
+            <thead>
+                <tr>
+                    <th>Cód.</th>
+                    <th>Componentes Curriculares/Docentes</th>
+                    <th>Turma</th>
+                    <th>Status</th>
+                    <th>Horário</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="content">CCCT0051</td>
+                    <td>
+                        <p><strong>BANCO DE DADOS</strong></p>
+                        <p>LUIS CLAUDIO DE OLIVEIRA SILVA e CLAUDIO MANOEL PEREIRA AROUCHA</p>
+                        <p><strong>Tipo:</strong> DISCIPLINA <strong>Local:</strong> Lab I - Térreo - Paulo Freire
+                        </p>
+                    </td>
+                    <td class="content">01</td>
+                    <td class="content">MATRICULADO</td>
+                    <td class="content">246M56</td>
+                </tr>
+                <tr>
+                    <td class="content">CCCT0051</td>
+                    <td>
+                        <p><strong>BANCO DE DADOS</strong></p>
+                        <p>LUIS CLAUDIO DE OLIVEIRA SILVA e CLAUDIO MANOEL PEREIRA AROUCHA</p>
+                        <p><strong>Tipo:</strong> DISCIPLINA <strong>Local:</strong> Lab I - Térreo - Paulo Freire
+                        </p>
+                    </td>
+                    <td class="content">01</td>
+                    <td class="content">MATRICULADO</td>
+                    <td class="content">246M56</td>
+                </tr>
+                <tr>
+                    <td class="content">CCCT0051</td>
+                    <td>
+                        <p><strong>BANCO DE DADOS</strong></p>
+                        <p>LUIS CLAUDIO DE OLIVEIRA SILVA e CLAUDIO MANOEL PEREIRA AROUCHA</p>
+                        <p><strong>Tipo:</strong> DISCIPLINA <strong>Local:</strong> Lab I - Térreo - Paulo Freire
+                        </p>
+                    </td>
+                    <td class="content">01</td>
+                    <td class="content">MATRICULADO</td>
+                    <td class="content">246M56</td>
+                </tr>
+                <tr>
+                    <td class="content">CCCT0051</td>
+                    <td>
+                        <p><strong>BANCO DE DADOS</strong></p>
+                        <p>LUIS CLAUDIO DE OLIVEIRA SILVA e CLAUDIO MANOEL PEREIRA AROUCHA</p>
+                        <p><strong>Tipo:</strong> DISCIPLINA <strong>Local:</strong> Lab I - Térreo - Paulo Freire
+                        </p>
+                    </td>
+                    <td class="content">01</td>
+                    <td class="content">MATRICULADO</td>
+                    <td class="content">246M56</td>
+                </tr>
+                <tr>
+                    <td class="content">CCCT0051</td>
+                    <td>
+                        <p><strong>BANCO DE DADOS</strong></p>
+                        <p>LUIS CLAUDIO DE OLIVEIRA SILVA e CLAUDIO MANOEL PEREIRA AROUCHA</p>
+                        <p><strong>Tipo:</strong> DISCIPLINA <strong>Local:</strong> Lab I - Térreo - Paulo Freire
+                        </p>
+                    </td>
+                    <td class="content">01</td>
+                    <td class="content">MATRICULADO</td>
+                    <td class="content">246M56</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="horarios">
+        <h2 class="table-title padding-on"> <strong>Tabela de Horários</strong> </h2>
+        <table class="table is-fullwidth is-bordered horario">
+            <thead>
+                <tr>
+                    <th>Horários</th>
+                    <th>Dom</th>
+                    <th>Seg</th>
+                    <th>Ter</th>
+                    <th>Qua</th>
+                    <th>Qui</th>
+                    <th>Sex</th>
+                    <th>Sab</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>07:30 - 08:20</td>
+                    <td>---</td>
+                    <td>CCCT0026</td>
+                    <td>CCCT0026</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>CCCT0026</td>
+                    <td>CCCT0026</td>
+                </tr>
+                <tr>
+                    <td>08:20 - 09:10</td>
+                    <td>---</td>
+                    <td>CCCT0026</td>
+                    <td>CCCT0026</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>CCCT0026</td>
+                    <td>CCCT0026</td>
+                </tr>
+                <tr>
+                    <td>09:20 - 10:10</td>
+                    <td>---</td>
+                    <td>CCCT0026</td>
+                    <td>CCCT0026</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>CCCT0026</td>
+                    <td>CCCT0026</td>
+                </tr>
+                <tr>
+                    <td>10:10 - 11:00</td>
+                    <td>---</td>
+                    <td>CCCT0026</td>
+                    <td>CCCT0026</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>CCCT0026</td>
+                    <td>CCCT0026</td>
+                </tr>
+                <tr>
+                    <td>11:10 - 12:00</td>
+                    <td>---</td>
+                    <td>CCCT0026</td>
+                    <td>CCCT0026</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>CCCT0026</td>
+                    <td>CCCT0026</td>
+                </tr>
+                <tr>
+                    <td>12:00 - 12:50</td>
+                    <td>---</td>
+                    <td>CCCT0026</td>
+                    <td>CCCT0026</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>CCCT0026</td>
+                    <td>CCCT0026</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>18:30 - 19:20</td>
+                    <td>---</td>
+                    <td>CCCT0026</td>
+                    <td>CCCT0026</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>CCCT0026</td>
+                    <td>CCCT0026</td>
+                </tr>
+                <tr>
+                    <td>19:30 - 20:20</td>
+                    <td>---</td>
+                    <td>CCCT0026</td>
+                    <td>CCCT0026</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>CCCT0026</td>
+                    <td>CCCT0026</td>
+                </tr>
+                <tr>
+                    <td>20:20 - 21:10</td>
+                    <td>---</td>
+                    <td>CCCT0026</td>
+                    <td>CCCT0026</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>CCCT0026</td>
+                    <td>CCCT0026</td>
+                </tr>
+                <tr>
+                    <td>21:10 - 22:00</td>
+                    <td>---</td>
+                    <td>CCCT0026</td>
+                    <td>CCCT0026</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>CCCT0026</td>
+                    <td>CCCT0026</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <p class="info-center"><strong>ATENÇAO</strong></p>
+    <hr class="row-style">
+    <p class="aviso-center">Para verificar a autenticidade deste documento acesse <strong class="red">https://sigaa.ufma.br/sigaa/documentos/</strong> informando a matrícula, a data de emissão e o código de verificação <strong class="red">1234567890</strong>.</p>
+
+    <div class="footer-institucional">
+        <div class="columns">
+            <div class="column is-2"></div>
+            <div class="column is-8">
+                    <p class="aviso-center">SIGAA | Núcleo de Tecnologia da Informação - (98) 3272-8000 - UFMA - sigaa1.intranet.ufma.br.sigaa1</p>
+            </div>
+            <div class="column is-2"></div>
+        </div>
+    </div>
+
+
+
+</div>
+
+{% endblock content %}
