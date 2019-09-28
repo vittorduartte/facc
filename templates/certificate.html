@@ -4,8 +4,8 @@
 
 <div class="container is-widescreen">
     <div class="columns header-institucional">
-        <div class="column is-3">
-            <img class="icon-img" src="{{ url_for('static', filename='images/hu.png') }}" alt="" srcset=""><br>
+        <div class="column is-3" style="float:left">
+            <img class="icon-img" src="{{ url_for('static', filename='images/hu.png', _external=True) }}" alt="" srcset=""><br>
             <strong><a class="info-LR" href="#">Portal do Discente</a></strong>
         </div>
         <div class="column is-6">
@@ -16,10 +16,9 @@
             </div>
         </div>
         <div class="column is-3">
-            <img class="icon-img" src="{{ url_for('static', filename='images/hu.png') }}" alt="" srcset="">
-            <strong><a href="#"></a></strong>
         </div>
     </div>
+    <br>
     <p class="info-center"><strong> Atestado de Matrícula </strong></p>
     <hr class="row-style">
     <table class="table is-fullwidth identificacao">
