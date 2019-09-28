@@ -5,18 +5,18 @@
 <div class="container is-widescreen">
     <div class="columns header-institucional">
         <div class="column is-3">
-            <img class="icon-img" src="{{ url_for('static', filename='images/ufrn.png') }}" alt="" srcset=""><br>
+            <img class="icon-img" src="{{ url_for('static', filename='images/hu.png') }}" alt="" srcset=""><br>
             <strong><a class="info-LR" href="#">Portal do Discente</a></strong>
         </div>
         <div class="column is-6">
             <div class="info-center table-title">
-                <p> <strong>Universidade Federal do Maranhão</strong> </p>
+                <p> <strong>Hackudo University</strong> </p>
                 <p> <strong>Sistema Integrado de Gestão Acadêmica</strong> </p>
-                <p class="emissao">Emitido em 06/09/2019 13:00</p>
+                <p class="emissao">Emitido em {{ data }}</p>
             </div>
         </div>
         <div class="column is-3">
-            <img class="icon-img" src="{{ url_for('static', filename='images/sinfo.png') }}" alt="" srcset="">
+            <img class="icon-img" src="{{ url_for('static', filename='images/hu.png') }}" alt="" srcset="">
             <strong><a href="#"></a></strong>
         </div>
     </div>
@@ -32,7 +32,7 @@
             </tr>
             <tr>
                 <td>Matrícula:</td>
-                <td> <strong>1234567890</strong> </td>
+                <td> <strong>{{ matricula }}</strong> </td>
                 <td>Vínculo:</td>
                 <td> <strong>REGULAR</strong> </td>
             </tr>
@@ -44,9 +44,9 @@
             </tr>
             <tr>
                 <td>Curso:</td>
-                <td> <strong>{{ curso }} - SÃO LUÍS - M</strong> </td>
+                <td> <strong>{{ curso }} - {{ cidade }} - {{ turno }}</strong> </td>
                 <td>Cidade:</td>
-                <td> <strong>SAO LUIS</strong> </td>
+                <td> <strong>{{ cidade }}</strong> </td>
             </tr>
             <tr>
                 <td>Formação:</td>
@@ -58,7 +58,7 @@
     </table>
 
     <div class="turmas">
-        <h2 class="table-title"> <strong>Turmas Matriculadas: 10</strong> </h2>
+        <h2 class="table-title"> <strong>Turmas Matriculadas: {{ num }}</strong> </h2>
         <table class="table is-bordered is-fullwidth turmas">
             <thead>
                 <tr>
@@ -70,66 +70,23 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td class="content">CCCT0051</td>
-                    <td>
-                        <p><strong>BANCO DE DADOS</strong></p>
-                        <p>LUIS CLAUDIO DE OLIVEIRA SILVA e CLAUDIO MANOEL PEREIRA AROUCHA</p>
-                        <p><strong>Tipo:</strong> DISCIPLINA <strong>Local:</strong> Lab I - Térreo - Paulo Freire
-                        </p>
-                    </td>
-                    <td class="content">01</td>
-                    <td class="content">MATRICULADO</td>
-                    <td class="content">246M56</td>
-                </tr>
-                <tr>
-                    <td class="content">CCCT0051</td>
-                    <td>
-                        <p><strong>BANCO DE DADOS</strong></p>
-                        <p>LUIS CLAUDIO DE OLIVEIRA SILVA e CLAUDIO MANOEL PEREIRA AROUCHA</p>
-                        <p><strong>Tipo:</strong> DISCIPLINA <strong>Local:</strong> Lab I - Térreo - Paulo Freire
-                        </p>
-                    </td>
-                    <td class="content">01</td>
-                    <td class="content">MATRICULADO</td>
-                    <td class="content">246M56</td>
-                </tr>
-                <tr>
-                    <td class="content">CCCT0051</td>
-                    <td>
-                        <p><strong>BANCO DE DADOS</strong></p>
-                        <p>LUIS CLAUDIO DE OLIVEIRA SILVA e CLAUDIO MANOEL PEREIRA AROUCHA</p>
-                        <p><strong>Tipo:</strong> DISCIPLINA <strong>Local:</strong> Lab I - Térreo - Paulo Freire
-                        </p>
-                    </td>
-                    <td class="content">01</td>
-                    <td class="content">MATRICULADO</td>
-                    <td class="content">246M56</td>
-                </tr>
-                <tr>
-                    <td class="content">CCCT0051</td>
-                    <td>
-                        <p><strong>BANCO DE DADOS</strong></p>
-                        <p>LUIS CLAUDIO DE OLIVEIRA SILVA e CLAUDIO MANOEL PEREIRA AROUCHA</p>
-                        <p><strong>Tipo:</strong> DISCIPLINA <strong>Local:</strong> Lab I - Térreo - Paulo Freire
-                        </p>
-                    </td>
-                    <td class="content">01</td>
-                    <td class="content">MATRICULADO</td>
-                    <td class="content">246M56</td>
-                </tr>
-                <tr>
-                    <td class="content">CCCT0051</td>
-                    <td>
-                        <p><strong>BANCO DE DADOS</strong></p>
-                        <p>LUIS CLAUDIO DE OLIVEIRA SILVA e CLAUDIO MANOEL PEREIRA AROUCHA</p>
-                        <p><strong>Tipo:</strong> DISCIPLINA <strong>Local:</strong> Lab I - Térreo - Paulo Freire
-                        </p>
-                    </td>
-                    <td class="content">01</td>
-                    <td class="content">MATRICULADO</td>
-                    <td class="content">246M56</td>
-                </tr>
+                
+                {% for i in disciplinas %}
+                
+                    <tr>
+                        <td class="content">UH010010</td>
+                        <td>
+                            <p><strong>Web c/ Python - Microframework FLASK</strong></p>
+                            <p>Guido Van Rossum</p>
+                            <p><strong>Tipo:</strong> DISCIPLINA <strong>Local:</strong> Fernando de Noronha
+                            </p>
+                        </td>
+                        <td class="content">01</td>
+                        <td class="content">MATRICULADO</td>
+                        <td class="content">246M56</td>
+                    </tr>
+                
+                {% endfor %}
 
             </tbody>
         </table>
@@ -154,62 +111,62 @@
                 <tr>
                     <td>07:30 - 08:20</td>
                     <td>---</td>
-                    <td>CCCT0026</td>
-                    <td>CCCT0026</td>
+                    <td>HU010010</td>
+                    <td>HU010010</td>
                     <td>---</td>
                     <td>---</td>
-                    <td>CCCT0026</td>
-                    <td>CCCT0026</td>
+                    <td>HU010010</td>
+                    <td>HU010010</td>
                 </tr>
                 <tr>
                     <td>08:20 - 09:10</td>
                     <td>---</td>
-                    <td>CCCT0026</td>
-                    <td>CCCT0026</td>
+                    <td>HU010010</td>
+                    <td>HU010010</td>
                     <td>---</td>
                     <td>---</td>
-                    <td>CCCT0026</td>
-                    <td>CCCT0026</td>
+                    <td>HU010010</td>
+                    <td>HU010010</td>
                 </tr>
                 <tr>
                     <td>09:20 - 10:10</td>
                     <td>---</td>
-                    <td>CCCT0026</td>
-                    <td>CCCT0026</td>
+                    <td>HU010010</td>
+                    <td>HU010010</td>
                     <td>---</td>
                     <td>---</td>
-                    <td>CCCT0026</td>
-                    <td>CCCT0026</td>
+                    <td>HU010010</td>
+                    <td>HU010010</td>
                 </tr>
                 <tr>
                     <td>10:10 - 11:00</td>
                     <td>---</td>
-                    <td>CCCT0026</td>
-                    <td>CCCT0026</td>
+                    <td>HU010010</td>
+                    <td>HU010010</td>
                     <td>---</td>
                     <td>---</td>
-                    <td>CCCT0026</td>
-                    <td>CCCT0026</td>
+                    <td>HU010010</td>
+                    <td>HU010010</td>
                 </tr>
                 <tr>
                     <td>11:10 - 12:00</td>
                     <td>---</td>
-                    <td>CCCT0026</td>
-                    <td>CCCT0026</td>
+                    <td>HU010010</td>
+                    <td>HU010010</td>
                     <td>---</td>
                     <td>---</td>
-                    <td>CCCT0026</td>
-                    <td>CCCT0026</td>
+                    <td>HU010010</td>
+                    <td>HU010010</td>
                 </tr>
                 <tr>
                     <td>12:00 - 12:50</td>
                     <td>---</td>
-                    <td>CCCT0026</td>
-                    <td>CCCT0026</td>
+                    <td>HU010010</td>
+                    <td>HU010010</td>
                     <td>---</td>
                     <td>---</td>
-                    <td>CCCT0026</td>
-                    <td>CCCT0026</td>
+                    <td>HU010010</td>
+                    <td>HU010010</td>
                 </tr>
                 <tr>
                     <td></td>
@@ -224,42 +181,42 @@
                 <tr>
                     <td>18:30 - 19:20</td>
                     <td>---</td>
-                    <td>CCCT0026</td>
-                    <td>CCCT0026</td>
+                    <td>HU010010</td>
+                    <td>HU010010</td>
                     <td>---</td>
                     <td>---</td>
-                    <td>CCCT0026</td>
-                    <td>CCCT0026</td>
+                    <td>HU010010</td>
+                    <td>HU010010</td>
                 </tr>
                 <tr>
                     <td>19:30 - 20:20</td>
                     <td>---</td>
-                    <td>CCCT0026</td>
-                    <td>CCCT0026</td>
+                    <td>HU010010</td>
+                    <td>HU010010</td>
                     <td>---</td>
                     <td>---</td>
-                    <td>CCCT0026</td>
-                    <td>CCCT0026</td>
+                    <td>HU010010</td>
+                    <td>HU010010</td>
                 </tr>
                 <tr>
                     <td>20:20 - 21:10</td>
                     <td>---</td>
-                    <td>CCCT0026</td>
-                    <td>CCCT0026</td>
+                    <td>HU010010</td>
+                    <td>HU010010</td>
                     <td>---</td>
                     <td>---</td>
-                    <td>CCCT0026</td>
-                    <td>CCCT0026</td>
+                    <td>HU010010</td>
+                    <td>HU010010</td>
                 </tr>
                 <tr>
                     <td>21:10 - 22:00</td>
                     <td>---</td>
-                    <td>CCCT0026</td>
-                    <td>CCCT0026</td>
+                    <td>HU010010</td>
+                    <td>HU010010</td>
                     <td>---</td>
                     <td>---</td>
-                    <td>CCCT0026</td>
-                    <td>CCCT0026</td>
+                    <td>HU010010</td>
+                    <td>HU010010</td>
                 </tr>
             </tbody>
         </table>
@@ -267,13 +224,13 @@
     </div>
     <p class="info-center"><strong>ATENÇAO</strong></p>
     <hr class="row-style">
-    <p class="aviso-center">Para verificar a autenticidade deste documento acesse <strong class="red">https://sigaa.ufma.br/sigaa/documentos/</strong> informando a matrícula, a data de emissão e o código de verificação <strong class="red">1234567890</strong>.</p>
+    <p class="aviso-center">Para verificar a autenticidade deste documento acesse <strong class="red">https://hackudaouniversity.hu.br</strong> informando a matrícula, a data de emissão e o código de verificação <strong class="red">{{ matricula }}</strong>.</p>
 
     <div class="footer-institucional">
         <div class="columns">
             <div class="column is-2"></div>
             <div class="column is-8">
-                    <p class="aviso-center">SIGAA | Núcleo de Tecnologia da Informação - (98) 3272-8000 - UFMA - sigaa1.intranet.ufma.br.sigaa1</p>
+                    <p class="aviso-center">Desenvolvido por Mateus Vitor - mateusriograndense@gmail.com - @vittorduartte - https://vittorduartte.github.io</p>
             </div>
             <div class="column is-2"></div>
         </div>

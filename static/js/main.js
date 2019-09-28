@@ -1,0 +1,1 @@
+alert("Você está cometendo um possível crime, tem certeza que deseja continuar?")
