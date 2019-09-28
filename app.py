@@ -2,9 +2,6 @@ from flask import Flask, render_template, url_for, request, redirect, make_respo
 from datetime import datetime
 import random, pdfkit
 
-path = r'/usr/local/bin/wkhtmltopdf'
-config = pdfkit.configuration(wkhtmltopdf = path)
-
 app = Flask(__name__)
 
 @app.route('/', methods = ['GET', 'POST'])
@@ -34,7 +31,7 @@ def index():
         disciplinas=range(0,int(disciplinas)), 
         num=disciplinas)
 
-        pdf = pdfkit.from_string(rendered, False, configuration = config)
+        pdf = pdfkit.from_string(rendered, False)
 
         response = make_response(pdf)
         response.headers['Content-Type'] = 'application/pdf'
