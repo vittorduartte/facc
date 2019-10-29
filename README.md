@@ -2,7 +2,7 @@
 
 ## Instalação
 
-Para executar a ferramenta é necessário algumas ferramentas fundamentais. O **Python 3.6.** devidamente instalado, o seu gerenciador de pacótes **PiP** e o gerenciador de ambientes **Pipenv**. Siga os passos abaixo para a instalação.
+Para executar a ferramenta é necessário algumas ferramentas fundamentais. O **Python 3.6.x** devidamente instalado, o seu gerenciador de pacótes **PiP** e o gerenciador de ambientes **Pipenv**. Siga os passos abaixo para a instalação.
 
 **1. Instale o Pipenv**
 ```
