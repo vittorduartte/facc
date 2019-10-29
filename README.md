@@ -33,7 +33,9 @@ $ pipenv shell
 ## Referências
 
 **Pipenv** - https://pipenv-fork.readthedocs.io/en/latest/
+
 **Flask** - http://flask.palletsprojects.com/en/1.1.x/
+
 **Engenharia Social** - https://medium.com/@mateusriograndense/numa-tarde-t%C3%A3o-linda-de-sol-codei-uma-ferramenta-para-engenharia-social-8f83cafa57f7
 
   
